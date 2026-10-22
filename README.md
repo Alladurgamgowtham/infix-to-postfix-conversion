@@ -1,42 +1,4 @@
 # infix-to-postfix-conversion 
 Infix to Postfix Conversion Using Reverse Polish Notation. A Program to Convert infix expression into postfix expressions using stack operation and operator precedence.
-# Algorithm: Infix to Postfix Conversion
 
-1. Start the program.
-
-2. Declare variables to store the infix expression, postfix expression, operator, and loop counters.
-
-3. Read the infix expression from the user.
-
-4. Calculate the length of the infix expression using `strlen()`.
-
-5. Scan the expression from left to right, one character or operator at a time.
-
-6. If the token is an operand (letter or digit), append it directly to the postfix expression.
-
-7. If the token is an opening bracket (`(`, `[` or `{`), push it onto the stack.
-
-8. If the token is a closing bracket (`)`, `]` or `}`):
-
-   * Pop operators from the stack and append them to the postfix expression until an opening bracket is found.
-   * Check whether the opening and closing brackets match.
-   * If they do not match, display "Invalid brackets" and terminate the program.
-   * Otherwise, pop the opening bracket from the stack.
-
-9. If the token is an operator:
-
-   * Check whether it is a supported one-character or two-character operator.
-   * If the operator is unsupported, display an error and terminate the program.
-   * While the stack is not empty, the top is not an opening bracket, and the stack operator has higher or equal precedence, pop it and append it to the postfix expression.
-   * Push the incoming operator onto the stack.
-
-10. After scanning the entire expression, pop all remaining operators from the stack and append them to the postfix expression.
-
-11. If an unmatched opening bracket remains, display "Invalid brackets" and terminate the program.
-
-12. Add the null terminator (`'\0'`) to the postfix string.
-
-13. Display the postfix expression.
-
-14. Stop the program.
   
